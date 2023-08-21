@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import PostContainer from "./containers/PostContainer.jsx";
 
 function App() {
+  /*
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -61,6 +63,12 @@ function App() {
           ))}
         </ul>
       </section>
+    </>
+  );
+  */
+  return (
+    <>
+      <PostContainer />
     </>
   );
 }
