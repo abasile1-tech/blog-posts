@@ -14,8 +14,10 @@ function PostContainer() {
   return (
     <>
       <Header />
-      <PostForm posts={posts} setPosts={setPosts} />
-      <PostList posts={posts} />
+      <section className="container feed">
+        <PostForm posts={posts} setPosts={setPosts} />
+        <PostList posts={posts} />
+      </section>
     </>
   );
 }
