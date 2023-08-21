@@ -14,7 +14,7 @@ function PostContainer() {
   return (
     <>
       <Header />
-      <PostForm />
+      <PostForm posts={posts} setPosts={setPosts} />
       <PostList posts={posts} />
     </>
   );

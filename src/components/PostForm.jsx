@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function PostForm({ posts }) {
+function PostForm({ posts, setPosts }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
