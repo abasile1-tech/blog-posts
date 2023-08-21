@@ -10,6 +10,18 @@ function App() {
     },
   ]);
 
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const createPost = () => {
+    const newPost = {
+      id: posts.length + 1,
+      title,
+      description,
+    };
+    setPosts([...posts, newPost]);
+  };
+
   return (
     <>
       <header className="header">
@@ -20,13 +32,24 @@ function App() {
         <h2>Add Post</h2>
         <div>
           <label htmlFor="">Title</label>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+          />
         </div>
         <div>
           <label htmlFor="">Description</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+          ></textarea>
         </div>
-        <button>Create Post</button>
+        <button onClick={createPost}>Create Post</button>
 
         <h1>Your feed</h1>
         <ul id="post-list">
