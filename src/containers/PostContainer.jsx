@@ -12,12 +12,24 @@ function PostContainer() {
       liked: true,
     },
   ]);
+
+  const handleLike = (post) => {
+    console.log("Like post");
+    setPosts([
+      ...posts.map((postItem) =>
+        post.id == postItem.id
+          ? { ...postItem, liked: !postItem.liked }
+          : postItem
+      ),
+    ]);
+  };
+
   return (
     <>
       <Header />
       <section className="container feed">
         <PostForm posts={posts} setPosts={setPosts} />
-        <PostList posts={posts} />
+        <PostList posts={posts} handleLike={handleLike} />
       </section>
     </>
   );

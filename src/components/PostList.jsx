@@ -1,8 +1,10 @@
 import Post from "./Post";
 import PropTypes from "prop-types";
 
-function PostList({ posts }) {
-  const postItems = posts.map((post) => <Post post={post} key={post.id} />);
+function PostList({ posts, handleLike }) {
+  const postItems = posts.map((post) => (
+    <Post post={post} handleLike={handleLike} key={post.id} />
+  ));
   return (
     <>
       <h1>Your feed</h1>
@@ -12,6 +14,7 @@ function PostList({ posts }) {
 }
 PostList.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleLike: PropTypes.func.isRequired,
 };
 
 export default PostList;
