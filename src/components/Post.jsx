@@ -11,7 +11,7 @@ function Post({ post }) {
   );
 }
 Post.propTypes = {
-  post: PropTypes.string.isRequired,
+  post: PropTypes.object.isRequired,
 };
 
 export default Post;

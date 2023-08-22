@@ -42,8 +42,8 @@ function PostForm({ posts, setPosts }) {
   );
 }
 PostForm.propTypes = {
-  posts: PropTypes.string.isRequired,
-  setPosts: PropTypes.string.isRequired,
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setPosts: PropTypes.isRequired,
 };
 
 export default PostForm;
