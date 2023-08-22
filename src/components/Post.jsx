@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Post({ post }) {
   return (
     <>
@@ -8,5 +10,8 @@ function Post({ post }) {
     </>
   );
 }
+Post.propTypes = {
+  post: PropTypes.string.isRequired,
+};
 
 export default Post;

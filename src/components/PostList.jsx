@@ -1,4 +1,5 @@
 import Post from "./Post";
+import PropTypes from "prop-types";
 
 function PostList({ posts }) {
   const postItems = posts.map((post) => <Post post={post} key={post.id} />);
@@ -9,4 +10,8 @@ function PostList({ posts }) {
     </>
   );
 }
+PostList.propTypes = {
+  posts: PropTypes.string.isRequired,
+};
+
 export default PostList;
