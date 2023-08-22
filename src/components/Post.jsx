@@ -6,7 +6,13 @@ function Post({ post }) {
       <li className="post">
         <h3>{post.title}</h3>
         <p>{post.description}</p>
-        <button>{post.liked == true ? "Unlike" : "Like"}</button>
+        <button>
+          {post.liked == true
+            ? "Unlike"
+            : post.title == "Test"
+            ? "Test"
+            : "Like"}
+        </button>
       </li>
     </>
   );
