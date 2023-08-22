@@ -9,6 +9,7 @@ function PostContainer() {
       id: 1,
       title: "What is a function",
       description: "lorem ipsum blah blah blah",
+      liked: true,
     },
   ]);
   return (
