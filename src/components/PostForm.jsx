@@ -11,7 +11,7 @@ function PostForm({ posts, setPosts }) {
       title,
       description,
     };
-    setPosts([...posts, newPost]);
+    setPosts([newPost, ...posts]);
     setTitle("");
     setDescription("");
   };
